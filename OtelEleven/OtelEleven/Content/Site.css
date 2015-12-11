@@ -1,0 +1,80 @@
+﻿ .back{
+     background-color:#330B24;
+ }
+ .yonlendir li{
+
+     float:right;
+     letter-spacing:1px;
+     text-decoration:none;
+     color:red;
+     list-style:none;
+     margin:0;
+     padding:0;
+     padding-right:10px;
+     }
+.yonlendir li a{
+    color:white;
+}
+
+ .liste li{ 
+     float:left;
+     list-style:none;
+     text-decoration:none; 
+    padding:18px;
+    margin:0;
+     color:#99FFB3;
+ }
+  .liste li a{
+    font-size:16px;
+     color:orange;
+ }
+ .liste li a:hover{
+     text-decoration:none;
+     color:aqua;
+ }
+ .active{
+     color:red; 
+ }
+ .loginpartial 
+ {
+     float:right;
+ }
+ .loginpartial li{
+     float:left;
+     list-style:none;
+ }
+ .loginpartial li a{
+      color:green;
+ }
+ .loginpartial li a{
+     color:#99FFB3;
+     font-size:16px;
+ }
+ .loginpartial li a:hover{
+     text-decoration:none;
+     color:orange;
+ }
+ .baslik{
+     color:orange;
+     font-size:50px; 
+ }
+ .baslik li a:hover{
+     text-decoration:none;
+ }
+ .kisi {
+     color:#8C4600;
+     font-size:14px;
+ }
+ .secenekler a{
+     color:#D9D900;
+     font-size:14px;
+     margin:5px;
+ }
+ .login  {
+     list-style:none;
+     margin-right:2px;
+
+ }
+ .alt a{
+     color:orange;
+ }

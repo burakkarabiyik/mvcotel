@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+   <div class="row">
+      <div class="col-md-12">
+          <ul class="login">
+              <li class="kisi">
+                  Sayın @User.Identity.GetUserName()  Hoşgeldiniz
+              </li>
+              <li class="secenekler">
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+                  <a href="javascript:document.getElementById('logoutForm').submit()">Kontrol Paneli</a>
+              </li>
+          </ul>
+      </div>
+   </div>
+    }
+}
+else
+{
+    <ul class="loginpartial">
+        <li style="margin-right:15px">@Html.ActionLink("Üye Ol", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}
