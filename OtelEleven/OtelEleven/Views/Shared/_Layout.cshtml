@@ -9,77 +9,77 @@
 
 </head>
 <body>
-   <div class="container back">
-       <div class="container">
-          <div class="row">
-              <div class="col-md-offset-10 col-md-2">
-                  <ul class="yonlendir">
-                      <li >@Html.ActionLink("FR", "Index", "Home")</li>
-                      <li>@Html.ActionLink("EN", "Index", "Home")</li>
-                      <li>@Html.ActionLink("IT", "Index", "Home")</li>
-                      <li class="active">@Html.ActionLink("TR", "Index", "Home", new { @class = "active" })</li>
-                  </ul>
-              </div>
-          </div>
-       </div>
-       <div class="navbar  ">
-           <div class="container ">
-              <div class="row" style="margin:0px;padding:0px;margin-top:5px;margin-bottom:5px;">
-                      <div class="col-md-4" style="margin-left:0;padding:0">
-                             @Html.ActionLink("B.U.R.A.K", "Index", "Home", new { @class = "baslik" })
+    <div class="container back">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-10 col-md-2">
+                    <ul class="yonlendir">
+                        <li>@Html.ActionLink("FR", "Index", "Home")</li>
+                        <li>@Html.ActionLink("EN", "Index", "Home")</li>
+                        <li>@Html.ActionLink("IT", "Index", "Home")</li>
+                        <li class="active">@Html.ActionLink("TR", "Index", "Home", new { @class = "active" })</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="navbar  ">
+            <div class="container ">
+                <div class="row" style="margin:0px;padding:0px;margin-top:5px;margin-bottom:5px;">
+                    <div class="col-md-4" style="margin-left:0;padding:0">
+                        @Html.ActionLink("B.U.R.A.K", "Index", "Home", new { @class = "baslik" })
 
-                      </div>
-                 
-                     
-                      <div class="col-md-offset-4 col-md-4"> 
-                         <br />
-                              @Html.Partial("_LoginPartial") 
-                      </div>
-                      <button type="button" class="navbar-toggle" style="color:white;" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="glyphicon glyphicon-zoom-out"></span>
+                    </div>
 
-                      </button>
-                  
-              </div>
-             <div class="row">
+
+                    <div class="col-md-offset-4 col-md-4">
+                        <br />
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                    <button type="button" class="navbar-toggle" style="color:white;" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-zoom-out"></span>
+
+                    </button>
+
+                </div>
+                <div class="row">
                     <div class="navbar-collapse collapse">
 
                         <div class="col-xs-10 col-md-offset-2" style="text-align:center">
                             <ul class="liste">
-                                <li>@Html.ActionLink("Anasayfa", "Index", "Home")</li>
-                                <li>@Html.ActionLink("Odalar", "About", "Home")</li>
-                                <li>@Html.ActionLink("Etkinlikler", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Rezervasyon", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Ekstralar", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Etkinlikler", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Hakkımızda", "Contact", "Home")</li>
-                                
+                                <li>@Html.ActionLink("Anasayfa", "Anasayfa", "Ana")</li>
+                                <li>@Html.ActionLink("Odalar", "Odalar", "Ana")</li>
+                                <li>@Html.ActionLink("Etkinlikler", "Etkinlikler", "Ana")</li>
+                                <li>@Html.ActionLink("Rezervasyon", "Rezervasyon", "Ana")</li>
+                                <li>@Html.ActionLink("Ekstralar", "Ekstralar", "Ana")</li>
+                                <li>@Html.ActionLink("Etkinlikler", "Etkinlikler", "Ana")</li>
+                                <li>@Html.ActionLink("Hakkımızda", "Hakkimizda", "Ana")</li>
+
                                 <li>@Html.ActionLink("Admin", "Contact", "Home")</li>
-                                
-                                 
+
+
                             </ul>
 
                         </div>
+                    </div>
                 </div>
-             </div>
-           </div>
-       </div>
-   </div>
+            </div>
+        </div>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer class="alt" style="background-color:#330B24;">
             <div class="row">
-                  <div class="col-md-4 alt" style="color:#99FFB3">
-                      @Html.ActionLink("F", "Index", "Home")
-                      @Html.ActionLink("T", "Index", "Home")
-                      @Html.ActionLink("İ", "Index", "Home")
-                  </div>
-                <div class="col-md-4 alt" style="text-align:center;color:#99FFB3" >
-                    @Html.ActionLink("Anasayfa", "Index", "Home") &
-                    @Html.ActionLink("İletişim", "Index", "Home") &
-                    @Html.ActionLink("Hakkımızda", "Index", "Home") &
-                    <a href="iletisim">Otel</a> <br />&ensp;&ensp;
+                <div class="col-md-4 alt" style="color:#99FFB3">
+                    @Html.ActionLink("F", "Index", "Home")
+                    @Html.ActionLink("T", "Index", "Home")
+                    @Html.ActionLink("İ", "Index", "Home")
+                </div>
+                <div class="col-md-4 alt" style="text-align:center;color:#99FFB3">
+                    @Html.ActionLink("Anasayfa", "Anasayfa", "Ana") &
+                    @Html.ActionLink("İletişim", "Iletisim", "Ana") &
+                    @Html.ActionLink("Hakkımızda", "Hakkimizda", "Ana")
+                    <br />&ensp;&ensp;
                     <a>Tüm Haklar Saklıdır @@2015</a>
 
 
