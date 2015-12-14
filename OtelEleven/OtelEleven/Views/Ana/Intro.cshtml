@@ -11,7 +11,10 @@
 </head>
 <body>
     <div>
-        <a href="~/Ana/Anasayfa">Anasayfa</a>
-    </div>
+        <a href="~/Ana/Anasayfa">Anasayfa</a>       
+                 @Html.ActionLink("EN", "ChangeCulture", "Ana", new { lang = "en", returnurl = "~/Ana/Anasayfa" }, null)
+        @Html.ActionLink("TR", "ChangeCulture", "Ana", new { lang = "tr", returnurl = "~/Ana/Anasayfa" }, null)
+        @Html.ActionLink("It", "ChangeCulture", "Ana", new { lang = "it", returnurl = "~/Ana/Anasayfa" }, null)
+     </div>
 </body>
 </html>

@@ -202,6 +202,14 @@ C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\Microsoft.Owin
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csprojResolveAssemblyReference.cache
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.dll
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.pdb
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\en\OtelEleven.resources.dll
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.Resources.Home.resources
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.Resources.Home.en.resources
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csproj.GenerateResource.Cache
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\en\OtelEleven.resources.dll
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csprojResolveAssemblyReference.cache
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\it\OtelEleven.resources.dll
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.Resources.Home.it.resources
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\it\OtelEleven.resources.dll

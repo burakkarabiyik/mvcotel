@@ -8,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace OtelEleven.Models
 {
-    public class Oda
+    public class Etkinlikler
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int kackisi { get; set; }
-        [Key]
-        public int OdaNo { get; set; }
-        public bool Vip { get; set; }
-        public bool Dolumu { get; set; }
-        public int Ucret { get; set; }
+        public String EtkinlikAdi { get; set; }
+        public DateTime Tarih { get; set; }
+        public String icerik { get; set; }
+        public byte[] Foto { get; set; }
+
     }
 }

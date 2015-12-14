@@ -15,57 +15,49 @@
                 <div class="col-md-offset-10 col-md-2">
                     <ul class="yonlendir">
                         <li>@Html.ActionLink("FR", "Index", "Home")</li>
-                        <li>@Html.ActionLink("EN", "Index", "Home")</li>
+                        <li>@Html.ActionLink("English", "ChangeCulture", "Ana", new { lang = "en", returnurl = this.Request.RawUrl }, null)</li>
                         <li>@Html.ActionLink("IT", "Index", "Home")</li>
-                        <li class="active">@Html.ActionLink("TR", "Index", "Home", new { @class = "active" })</li>
+                        <li class="active">@Html.ActionLink("Türkçe", "ChangeCulture", "Home", new { lang = "tr", returnUrl = this.Request.RawUrl }, null)</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="navbar  ">
-            <div class="container ">
-                <div class="row" style="margin:0px;padding:0px;margin-top:5px;margin-bottom:5px;">
-                    <div class="col-md-4" style="margin-left:0;padding:0">
-                        @Html.ActionLink("B.U.R.A.K", "Index", "Home", new { @class = "baslik" })
+        <div class="navbar">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3" style="color:white;font-size:25px;font-family:'Chaparral Pro'" > 
 
-                    </div>
-
-
+                        <img class="img-responsive img-circle col-md-12" src="~/Image/inci.jpg" />
+                    </div> 
                     <div class="col-md-offset-4 col-md-4">
                         <br />
                         @Html.Partial("_LoginPartial")
                     </div>
-                    <button type="button" class="navbar-toggle" style="color:white;" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="glyphicon glyphicon-zoom-out"></span>
+                    <button type="button" class="navbar-toggle" style="color:black;" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                      </button>
 
-                    </button>
-
-                </div>
-                <div class="row">
+                </div><br />
+                <div class="row resim">
                     <div class="navbar-collapse collapse">
-
-                        <div class="col-xs-10 col-md-offset-2" style="text-align:center">
+                        
+                        <div class="col-xs-11 col-md-offset-1" style="text-align:center">
                             <ul class="liste">
-                                <li>@Html.ActionLink("Anasayfa", "Anasayfa", "Ana")</li>
-                                <li>@Html.ActionLink("Odalar", "Odalar", "Ana")</li>
-                                <li>@Html.ActionLink("Etkinlikler", "Etkinlikler", "Ana")</li>
-                                <li>@Html.ActionLink("Rezervasyon", "Rezervasyon", "Ana")</li>
-                                <li>@Html.ActionLink("Ekstralar", "Ekstralar", "Ana")</li>
-                                <li>@Html.ActionLink("Etkinlikler", "Etkinlikler", "Ana")</li>
-                                <li>@Html.ActionLink("Hakkımızda", "Hakkimizda", "Ana")</li>
-
-                                <li>@Html.ActionLink("Admin", "Contact", "Home")</li>
-
-
-                            </ul>
-
+                                <li>@Html.ActionLink(Resources.Home.Anasayfa, "Anasayfa", "Ana")</li>
+                                <li>@Html.ActionLink(Resources.Home.Odalar, "Odalar", "Ana")</li> 
+                                <li>@Html.ActionLink(Resources.Home.Rezervasyon, "Rezervasyon", "Ana")</li>
+                                <li>@Html.ActionLink(Resources.Home.Kampanyalar, "Ekstralar", "Ana")</li>
+                                <li>@Html.ActionLink(Resources.Home.Etkinlikler, "Etkinlikler", "Ana")</li>
+                                <li>@Html.ActionLink(Resources.Home.Hakkımızda, "Hakkimizda", "Ana")</li> 
+                                <li>@Html.ActionLink(Resources.Home.Admin, "Contact", "Home")</li>
+                            </ul> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
+    </div>   
+    <div class="container body-content icerik"> 
         @RenderBody()
         <hr />
         <footer class="alt" style="background-color:#330B24;">

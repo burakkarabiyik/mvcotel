@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace OtelEleven.Models
 {
-    class Kampanya
+    public class Kampanya
     {
-        [Key]
-        public int Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; } 
+        public int OdaNo { get; set; }
         public string Ad { get; set; }
         public Oda oda { get; set; }
         public int Indirim  { get; set; }

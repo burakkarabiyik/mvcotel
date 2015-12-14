@@ -1,7 +1,16 @@
-﻿
+﻿@model IEnumerable<OtelEleven.Models.Etkinlikler>
 @{
     ViewBag.Title = "Etkinlikler";
 }
-
-<h2>Etkinlikler</h2>
-
+<br />
+ <h1>İnci Otel Büyük Etkinlikleri</h1>
+<br />
+    <ul style="list-style:none;color:black;font-size:15px;font-weight:bold">
+        @foreach (var item in Model)
+        {
+            if(item.Foto!=null)
+            <li><img src="data:text/plain;base64,@item.Foto" />&ensp;&ensp; @item.EtkinlikAdi   &ensp;&ensp;&ensp;&ensp;@item.icerik<br />@item.Tarih.ToString("dd/MM/yyyy")<hr />  </li>
+                 
+        }
+    </ul> 
+<h2>Katılımlarınızı Bekliyoruz...</h2>

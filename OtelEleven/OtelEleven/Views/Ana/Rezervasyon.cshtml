@@ -1,7 +1,116 @@
-﻿
+﻿@model OtelEleven.Models.Rezerv
+
 @{
     ViewBag.Title = "Rezervasyon";
 }
 
 <h2>Rezervasyon</h2>
 
+
+
+
+@{
+      OtelEleven.Models.Rezervasyon rez = new OtelEleven.Models.Rezervasyon();
+      rez = Model.Rezervasyon;
+      OtelEleven.Models.Oda oda = new OtelEleven.Models.Oda();
+      List<String> odalar = new List<string>();
+      List<int> odano = new List<int>();
+      var secilen = new SelectList(odalar, odano);
+      int odasayisi = 0;
+        
+}
+@{string k="",vip="";}
+
+ 
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @{k = "";} 
+
+                @foreach (var item in Model.oda)
+                {
+                    odasayisi++;
+                    if (item.Vip) { vip = "Vip"; } else { vip = "Vip değil"; }
+                    odano.Add(item.OdaNo);
+                    odalar.Add(" Kişi sayısı :       " + item.kackisi + "       Oda No " + item.OdaNo + "        Ücret: " + item.Ucret + "       Vip: " + vip);
+                    
+
+                }<div class="col-md-10">
+                    
+                
+                     <div class="form-group">
+                         <div class="row">@Html.LabelFor(model => rez.Giris, htmlAttributes: new { @class = " col-md-2" })</div>
+                         <div class="row">
+                             <div class="col-md-6">
+                                 @Html.EditorFor(model => rez.Giris, new { htmlAttributes = new { @class = "form-control" } })
+                                 @Html.ValidationMessageFor(model => rez.Giris, "", new { @class = "text-danger" })
+                             </div>
+                         </div>
+                     </div>
+                     <div class="form-group">
+                         <div class="row">
+                             @Html.LabelFor(model => rez.Cikis, htmlAttributes: new { @class = "col-md-2" })</div>
+                         <div class="row">
+                             <div class="col-md-6">
+                                 @Html.EditorFor(model => rez.Cikis, new { htmlAttributes = new { @class = "form-control" } })
+                                 @Html.ValidationMessageFor(model => rez.Cikis, "", new { @class = "text-danger" })
+                             </div></div>
+                         </div>
+                     <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-2 ">@{Html.Label(Resources.Home.Bos);}</div>
+                            </div>
+                         <div class="row">
+                             <div class="col-md-6">
+                                 @if (@odasayisi > 0)
+                                 {
+                                     @Html.DropDownList("D", secilen, new { @class = "form-control" })
+
+                                     @Html.ValidationMessageFor(model => rez.Odano, "", new { @class = "text-danger" })
+                                 }
+                                 else
+                                 {<div>@Resources.Home.Bosoda</div>}
+                             </div>
+                         </div>
+                                
+                         <div class="row">
+                             <div class="col-md-3 ">@if (@odasayisi > 0)
+                                    {@Html.Label(Resources.Home.SEC)}<br /></div>
+                            </div>
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    @if (@odasayisi > 0)
+                                    {
+
+                                         @Html.DropDownListFor(model => rez.Odano, new SelectList(odano), new { @class = "form-control col-lg-2" })
+                                         @Html.ValidationMessageFor(model => rez.Odano, "", new { @class = "text-danger" })
+                                 }
+                                 </div>
+                             </div>
+
+
+                           </div> 
+                      
+                 
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @if (odasayisi > 0) { 
+                        <input type="submit" value="Create" class="btn btn-default" />
+                        }
+                        else { 
+                        <input type="submit" value="Create" disabled="disabled" class="btn btn-default" />
+                        }
+                    </div>
+                </div>
+            </div>
+}
+
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>

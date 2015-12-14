@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OtelEleven.Models;
 
 namespace OtelEleven.Models
 {
-    public class Rezervasyon
+    public class Slider
     {
         public int Id { get; set; }
-        public DateTime Giris { get; set; }
-        public DateTime Cikis { get; set; }
-        public int Odano { get; set; }
+        public String ResimAdi { get; set; }
+        public Byte[] Resim { get; set; }
 
     }
 }

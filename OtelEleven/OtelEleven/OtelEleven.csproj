@@ -173,19 +173,39 @@
     <Compile Include="Controllers\AnaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\YöneticiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\dbContext.cs" />
+    <Compile Include="Models\Etkinlikler.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kampanya.cs" />
+    <Compile Include="Models\Rezerv.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Anasayfa.cs" />
     <Compile Include="Models\Oda.cs" />
     <Compile Include="Models\Rezervasyon.cs" />
+    <Compile Include="Models\Slider.cs" />
     <Compile Include="Models\Uyeler.cs" />
     <Compile Include="Models\Yorumlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Home.it.Designer.cs">
+      <DependentUpon>Home.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Home.en.Designer.cs">
+      <DependentUpon>Home.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Home.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.resx</DependentUpon>
+    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +225,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Image\dx3lvd64.bmp" />
+    <Content Include="Image\explore_city.jpg" />
+    <Content Include="Image\feature_1.jpg" />
+    <Content Include="Image\feature_2.jpg" />
+    <Content Include="Image\feature_3.jpg" />
+    <Content Include="Image\inci.jpg" />
+    <Content Include="Image\psuooe9q.bmp" />
+    <Content Include="Image\twyasl1f.bmp" />
     <Content Include="Scripts\bfh-language.jquery.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap-formhelpers-languages.js" />
@@ -259,14 +287,34 @@
     <Content Include="Views\Ana\Rezervasyon.cshtml" />
     <Content Include="Views\Ana\Odalar.cshtml" />
     <Content Include="Views\Ana\Ekstralar.cshtml" />
+    <Content Include="Views\Ana\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="Views\Yönetici\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Home.it.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.it.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.en.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Home.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

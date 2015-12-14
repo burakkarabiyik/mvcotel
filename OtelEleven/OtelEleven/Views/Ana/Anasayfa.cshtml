@@ -1,7 +1,68 @@
-﻿
+﻿@model OtelEleven.Models.Anasayfa
+
 @{
     ViewBag.Title = "Anasayfa";
 }
+ <br />
+<div class="row">
+ 
+    <img class="thumbnail img-responsive" src="~/Image/explore_city.jpg" />
+ 
+</div>
+@for (int i = 0; i < 7; i++)
+{
+    <br />
+}
+ 
+    <div class="row">
+    <div class="col-md-4">
+        <div class="page-header"><div style="text-align:center;font-weight:bold">
+    <img class="thumbnail" src="~/Image/feature_1.jpg" />The Parlour</div>
+</div>
+        The parlour
+        From H&H bagels to Sarabeth's jam, <br />Savor NYC's quintessential flavors.
+    </div>
+    <div class="col-md-4">
+        <div class="page-header"><div style="text-align:center;font-weight:bold"><img class="thumbnail" src="~/Image/feature_2.jpg" />Meetings</div></div>
+        
+        The Roger is a can't-miss location for Midtown Manhattan events.
+    </div><div class="col-md-4">
+        <div class="page-header"><div style="text-align:center;font-weight:bold"><img class="thumbnail" src="~/Image/feature_3.jpg" />Specials</div></div>
+              
+              Explore the city and save with The Roger's unbeatable specials.
+    </div>
+        </div>
+        @for (int i = 0; i < 10; i++)
+        { 
+            <br />
+        }
+        <div class="row visible-lg">
+            <div style="" class="container"><img class="container img-responsive" style="z-index: -999;position:absolute;" src="~/Image/psuooe9q.bmp" />
+            </div>
+            <div class="img-responsive" style="text-shadow:1px 1px 1px black;font-weight:bold;color:white;text-align:center;line-height:120px;font-size:17px" >
+            <p>Accommodations Old World comfort meets with stylish NYC sophistication in The Roger’s sweet city retreats.
+                <p><a style="font-size:25px;color:#D9D900;text-shadow:1px 1px 1px black" href="~/Ana/Odalar">See Rooms --> </a>
+                </p>
+ 
+                       </div>
+        </div>
 
-<h2>Anasayfa</h2>
+    @for (int i = 0; i < 10; i++)
+    {
+        <br />
+    }
+<div class="row" style="color:#D9D900;font-weight:bold">
+    
+     <div class="col-md-12" style="margin:5px;word-wrap:normal">
+         Son 5 Üye Yorumları<br /><br />
+         @foreach (var item in Model.Yorum)
+         {
+             <div>Kullanici adı   : @item.kullaniciadi</div>
+             <div style="word-wrap:break-word">Yorum    &ensp;&ensp;&ensp;&ensp;&ensp;: @item.yorum</div>
+             <hr />
 
+         }
+
+     </div>   
+ </div>
+ 

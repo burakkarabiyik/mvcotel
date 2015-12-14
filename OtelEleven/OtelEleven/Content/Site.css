@@ -1,8 +1,21 @@
-﻿ .back{
-     background-color:#330B24;
+﻿ .arkaplan{
+     background-color:#d9ecf6;
+     
+ }
+body{
+     background-image:url('../Image/dx3lvd64.bmp') ;
+     background-attachment:fixed ;
+ }
+.resim{ 
+        position:initial;
+         z-index:999;
+ }
+ .tablom td{
+      height:auto;
+      width:100px;
+    
  }
  .yonlendir li{
-
      float:right;
      letter-spacing:1px;
      text-decoration:none;
@@ -25,8 +38,10 @@
      color:#99FFB3;
  }
   .liste li a{
-    font-size:16px;
-     color:orange;
+    font-size:18px;
+     color:black;
+     font-weight:bold;
+    text-shadow:3px 1px 0.1px red;
  }
  .liste li a:hover{
      text-decoration:none;
@@ -47,7 +62,7 @@
       color:green;
  }
  .loginpartial li a{
-     color:#99FFB3;
+     color:black;
      font-size:16px;
  }
  .loginpartial li a:hover{

@@ -248,16 +248,14 @@ th {
   .label {
     border: 1px solid #000;
   }
-  .table {
-    border-collapse: collapse !important;
+  .table { 
   }
   .table td,
   .table th {
     background-color: #fff !important;
   }
   .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
+  .table-bordered td { 
   }
 }
 @font-face {
@@ -2274,8 +2272,7 @@ th {
 .table > tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
-  border-top: 1px solid #ddd;
+  vertical-align: top; 
 }
 .table > thead > tr > th {
   vertical-align: bottom;
