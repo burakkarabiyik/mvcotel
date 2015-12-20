@@ -77,14 +77,17 @@ namespace OtelEleven.Controllers
         }
         public void rezervasyonkontrol()
         {
-            var rez = ent.Rezervasyon.Where(i=>i.Cikis<DateTime.Now).ToList();
-            Oda oda;
-            foreach (var item in rez)
+            if (ent.Rezervasyon.Count() > 0)
             {
-                oda = ent.oda.Find(item.Odano);
-                oda.Dolumu = false;
+                var rez = ent.Rezervasyon.Where(i => i.Cikis < DateTime.Now).ToList();
+                Oda oda;
+                foreach (var item in rez)
+                {
+                    oda = ent.oda.Find(item.Odano);
+                    oda.Dolumu = false;
+                }
+                ent.SaveChanges();
             }
-            ent.SaveChanges();
         }
         public ActionResult Odalar()
         {

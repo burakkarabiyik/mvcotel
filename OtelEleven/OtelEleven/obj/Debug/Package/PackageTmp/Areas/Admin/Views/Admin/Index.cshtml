@@ -1,6 +1,0 @@
-﻿@using Microsoft.AspNet.Identity;
-@{
-    ViewBag.Title = "Admin";
-    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
-}  
-<h1 style="text-align:center;"> @{OtelEleven.Models.ApplicationDbContext db = new OtelEleven.Models.ApplicationDbContext(); var ad = db.Users.Find(User.Identity.GetUserId()); var adi = ad.Ad; ;} <br /><br /> Hoşgeldiniz <br /><br />  </h1>
