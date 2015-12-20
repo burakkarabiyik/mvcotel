@@ -66,16 +66,18 @@ namespace OtelEleven.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
+        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl="Anasayfa")
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-
+             
+            ApplicationDbContext db = new ApplicationDbContext();
+             
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.mail, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -151,7 +153,8 @@ namespace OtelEleven.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                model.Kullaniciadi = model.Kullaniciadi.ToUpper();
+                var user = new ApplicationUser { UserName = model.Email, Kullaniciadi = model.Kullaniciadi, Email = model.Email, Ad = model.Ad, Soyad = model.Soyad, Ulke = model.Ulke, Telno = model.Telno };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -163,7 +166,7 @@ namespace OtelEleven.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Anasayfa", "Ana");
                 }
                 AddErrors(result);
             }
@@ -392,7 +395,7 @@ namespace OtelEleven.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Anasayfa", "Ana");
         }
 
         //
@@ -449,7 +452,7 @@ namespace OtelEleven.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Anasayfa", "Ana");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

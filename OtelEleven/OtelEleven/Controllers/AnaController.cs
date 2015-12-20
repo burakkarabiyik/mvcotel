@@ -21,13 +21,29 @@ namespace OtelEleven.Controllers
         {
             Anasayfa ana = new Models.Anasayfa();
             ana.Slider = ent.Slider.ToList();
-            ana.Yorum = ent.yorumlar.ToList();
-            //if(ent.Slider.DefaultIfEmpty()!=null)
-            //{
-            //    return View();
-            //}
+            ana.Yorum = ent.yorumlar.Take(5).OrderByDescending(m=>m.Id).Take(5).ToList();
+            
             return View(ana);
         }
+
+        public ActionResult Yorumyap()
+        {
+           return View();
+        }
+        [HttpPost]
+        public ActionResult Yorumyap([Bind(Include = "Id,kullaniciadi,yorum")] Yorumlar yorumlar)
+        {
+            dbContext db = new dbContext();
+            if (ModelState.IsValid)
+            {
+                db.yorumlar.Add(yorumlar);
+                db.SaveChanges();
+                return RedirectToAction("Anasayfa");
+            }
+
+            return View(yorumlar);
+        }
+
         public ActionResult Hakkimizda()
         {
             return View();
@@ -37,16 +53,16 @@ namespace OtelEleven.Controllers
             
             return View(ent.Etkinlik.ToList());
         }
+        [Authorize]
         public ActionResult Rezervasyon()
         {
-            Rezerv rz = new Rezerv();
-            rz.oda = ent.oda.Where(m => m.Dolumu== false).ToList();
+            
 
-            return View(rz);
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Rezervasyon([Bind(Include = "Id,Cikis,Giris,Odano")] Rezervasyon rez)
+        public ActionResult Rezervasyon([Bind(Include = "Id,Cikis,Giris,hangikullanici,Odano")] Rezervasyon rez)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +88,9 @@ namespace OtelEleven.Controllers
         }
         public ActionResult Odalar()
         {
-            return View();
+            dbContext db = new dbContext();
+            var odalar = db.Resimler.ToList();
+            return View(odalar);
         }
         public ActionResult Ekstralar()
         {

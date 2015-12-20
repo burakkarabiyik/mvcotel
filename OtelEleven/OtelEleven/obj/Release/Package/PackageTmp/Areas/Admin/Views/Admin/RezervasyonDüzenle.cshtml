@@ -1,0 +1,49 @@
+﻿@model IEnumerable<OtelEleven.Models.Rezervasyon>
+
+@{
+    ViewBag.Title = "Rezervasyon Düzenle";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Rezervasyon Düzenle</h2>
+ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Giris)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cikis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Odano)
+        </th>
+        <th>
+            Hangi Kullanıcı
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Giris)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cikis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Odano)
+        </td>
+        <td>
+            @Html.DisplayFor(m=>item.hangikullanici)
+        </td>
+         
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

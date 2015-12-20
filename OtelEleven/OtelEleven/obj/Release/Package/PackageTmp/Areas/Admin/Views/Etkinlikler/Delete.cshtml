@@ -1,0 +1,56 @@
+﻿@model OtelEleven.Models.Etkinlikler
+
+@{
+    ViewBag.Title = "Etkinlik Sil";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+ 
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Etkinlikler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EtkinlikAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EtkinlikAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.icerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.icerik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Foto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Foto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

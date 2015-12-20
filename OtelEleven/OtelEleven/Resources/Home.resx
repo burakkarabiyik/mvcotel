@@ -198,4 +198,43 @@
   <data name="SEC" xml:space="preserve">
     <value>Oda Numarasını Seçiniz</value>
   </data>
+  <data name="Hangikullanici" xml:space="preserve">
+    <value>Hangi Kullanıcı</value>
+  </data>
+  <data name="Cik" xml:space="preserve">
+    <value>Çıkış</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Tekrar Şifre</value>
+  </data>
+  <data name="control" xml:space="preserve">
+    <value>Kontrol Paneli</value>
+  </data>
+  <data name="hatırla" xml:space="preserve">
+    <value>Beni Hatırla ?</value>
+  </data>
+  <data name="kullaniciad" xml:space="preserve">
+    <value>Kullanıcı Adı</value>
+  </data>
+  <data name="s" xml:space="preserve">
+    <value>Şifre</value>
+  </data>
+  <data name="soyad" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="TelNo" xml:space="preserve">
+    <value>Telefon Numarası</value>
+  </data>
+  <data name="Ulke" xml:space="preserve">
+    <value>Ülke</value>
+  </data>
+  <data name="yeni" xml:space="preserve">
+    <value>Yeni Üyelik Oluştur</value>
+  </data>
+  <data name="yorumyap" xml:space="preserve">
+    <value>Yorum Yap</value>
+  </data>
+  <data name="hos" xml:space="preserve">
+    <value>Hoş Geldiniz !</value>
+  </data>
 </root>

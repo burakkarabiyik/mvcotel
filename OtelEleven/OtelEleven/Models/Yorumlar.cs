@@ -14,8 +14,7 @@ namespace OtelEleven.Models
         public int Id { get; set; } 
         public string kullaniciadi { get; set; }
         
-        public string yorum { get; set; }
-        public Uyeler Uye { get; set; }
+        public string yorum { get; set; } 
 
     }
 }

@@ -49,9 +49,8 @@ namespace OtelEleven.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Mail")] 
+        public string mail { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -70,10 +69,27 @@ namespace OtelEleven.Models
         public string Email { get; set; }
 
         [Required]
+        [Display(Name = "Ad")]
+        public string Ad { get; set; }
+        [Required]
+        [Display(Name = "Soyad")]
+        public string Soyad { get; set; }
+        [Required]
+        [Display(Name = "Ulke")]
+        public string Ulke { get; set; }
+        [Display(Name="Telefon No")]
+        public string Telno { get; set; }
+        [Required]
+        [Display(Name = "Kullanıcı Adı")]
+        public string Kullaniciadi { get; set; }
+        
+
+        [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Şifre")]
         public string Password { get; set; }
+
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]

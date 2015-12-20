@@ -1,0 +1,45 @@
+﻿@model OtelEleven.Models.Yorumlar
+@using Microsoft.AspNet.Identity;
+@{
+    ViewBag.Title = "yorumyap";
+    OtelEleven.Models.ApplicationDbContext db = new OtelEleven.Models.ApplicationDbContext();
+    var kisi = db.Users.Find(User.Identity.GetUserId());
+    List<string> veri = new List<string>();
+    veri.Add(kisi.Kullaniciadi);
+}
+ <br /><br /><br/>
+@using (Html.BeginForm("Yorumyap", "Ana")) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal"> 
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label(@Resources.Home.kullaniciad, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Label(kisi.Kullaniciadi, htmlAttributes: new { @class="control-label"})
+                @Html.ValidationMessageFor(model => model.kullaniciadi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.yorum, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.yorum, new { htmlAttributes = new { @class = "form-control",@rows="50px",@cols="50" } })
+                @Html.ValidationMessageFor(model => model.yorum, "", new { @class = "text-danger" })
+            </div>
+        </div>
+      <div class="hidden">@Html.DropDownListFor(model => Model.kullaniciadi, new SelectList(veri), new { @class = "form-control col-lg-2" })
+</div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

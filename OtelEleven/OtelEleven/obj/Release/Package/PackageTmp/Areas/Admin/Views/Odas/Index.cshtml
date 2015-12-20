@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OtelEleven.Models.Oda>
+
+@{
+    ViewBag.Title = "Bütün Odalar";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+ 
+
+<p>
+    @Html.ActionLink("Yeni Oda Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.kackisi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dolumu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ucret)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+         
+        <td>
+            @Html.DisplayFor(modelItem => item.kackisi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dolumu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ucret)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.OdaNo }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.OdaNo }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.OdaNo })
+        </td>
+    </tr>
+}
+
+</table>

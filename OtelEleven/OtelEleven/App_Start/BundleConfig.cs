@@ -23,8 +23,11 @@ namespace OtelEleven
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new StyleBundle("~/Content/bootstrapp").Include(
+                      "~/Content/bootstrap.css"));
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/css/animate.css",
+                      
                       "~/Content/site.css"));
         }
     }

@@ -11,6 +11,7 @@ namespace OtelEleven.Models
         public int Id { get; set; }
         public DateTime Giris { get; set; }
         public DateTime Cikis { get; set; }
+        public string hangikullanici { get; set; }
         public int Odano { get; set; }
 
     }

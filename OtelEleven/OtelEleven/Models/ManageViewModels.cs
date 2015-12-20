@@ -12,6 +12,12 @@ namespace OtelEleven.Models
         public string PhoneNumber { get; set; }
         public bool TwoFactor { get; set; }
         public bool BrowserRemembered { get; set; }
+        public string Kullaniciadi { get; set; } 
+        public string Ad { get; set; }
+        public string Soyad { get; set; } 
+        public string Ulke { get; set; }
+        public string Telno { get; set; }
+        
     }
 
     public class ManageLoginsViewModel
@@ -64,6 +70,19 @@ namespace OtelEleven.Models
         [Phone]
         [Display(Name = "Phone Number")]
         public string Number { get; set; }
+    }
+    public class bilgiler
+    {
+        [Required] 
+        [Display(Name = "Ad")]
+        public string Ad { get; set; }
+        [Required] 
+        [Display(Name = "Soyad")]
+        public string Soyad{ get; set; }
+        [Required]
+        
+        [Display(Name = "Ulke")]
+        public string Ulke { get; set; }
     }
 
     public class VerifyPhoneNumberViewModel
