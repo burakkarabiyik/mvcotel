@@ -209,7 +209,6 @@ C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelElev
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.Resources.Home.en.resources
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csproj.GenerateResource.Cache
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\en\OtelEleven.resources.dll
-C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csprojResolveAssemblyReference.cache
 C:\Users\Burak\Desktop\OtelEleven\OtelEleven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\Burak\Desktop\OtelEleven\OtelEleven\bin\roslyn\VBCSCompiler.exe
 C:\Users\Burak\Desktop\OtelEleven\OtelEleven\bin\roslyn\csc.exe
@@ -299,3 +298,4 @@ C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\roslyn\System.
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\roslyn\vbc.exe.config
 C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\bin\roslyn\vbc.rsp
+C:\Users\Burak\Documents\webprogramlama\OtelEleven\OtelEleven\obj\Debug\OtelEleven.csprojResolveAssemblyReference.cache

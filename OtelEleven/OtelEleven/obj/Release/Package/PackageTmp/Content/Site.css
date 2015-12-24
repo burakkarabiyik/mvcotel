@@ -10,6 +10,12 @@ body {
         position:initial;
          z-index:999;
  }
+.kucukresim{
+    color:white;
+}
+.kucukresim a{
+    color:blue;
+}
 .intro a{
 
     font-size:40px;
@@ -96,6 +102,11 @@ body {
      color:darkgoldenrod;
      text-shadow:3px 0.6px 0.1px white;
      font-size:55px;
+ }
+ .ab a{
+     color:white;
+     text-shadow:2px 2px 1px black;
+     font-weight:bold;
  }
  .yorums:hover{
      background-color:red;

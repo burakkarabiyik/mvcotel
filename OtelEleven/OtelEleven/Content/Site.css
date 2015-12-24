@@ -10,6 +10,12 @@ body {
         position:initial;
          z-index:999;
  }
+.kucukresim{
+    color:white;
+}
+.kucukresim a{
+    color:blue;
+}
 .intro a{
 
     font-size:40px;

@@ -21,7 +21,7 @@ namespace OtelEleven.Controllers
         {
             Anasayfa ana = new Models.Anasayfa();
             ana.Slider = ent.Slider.ToList();
-            ana.Yorum = ent.yorumlar.Take(5).OrderByDescending(m=>m.Id).Take(5).ToList();
+            ana.Yorum = ent.yorumlar.OrderByDescending(m=>m.Id).Take(5).ToList();
             
             return View(ana);
         }
